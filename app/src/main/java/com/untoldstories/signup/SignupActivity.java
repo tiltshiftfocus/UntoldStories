@@ -20,10 +20,6 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Spinner;
 import android.widget.Toast;
-
-import com.amazonaws.mobileconnectors.s3.transfermanager.TransferManager;
-import com.amazonaws.mobileconnectors.s3.transfermanager.TransferProgress;
-import com.amazonaws.mobileconnectors.s3.transfermanager.Upload;
 import com.untoldstories.R;
 import com.untoldstories.utils.ImageUtils;
 import com.untoldstories.utils.S3Cred;
@@ -110,23 +106,6 @@ public class SignupActivity extends ActionBarActivity {
             } catch (IOException e) {
                 e.printStackTrace();
             }
-
-        // ** Upload image to S3
-        S3Cred mS3Cred = new S3Cred(this);
-        TransferManager mTransfer = new TransferManager(mS3Cred.getCognitoProvider());
-        //Region region = Region.getRegion(Regions.US_EAST_1);
-        //AmazonS3Client s3Client = new AmazonS3Client();
-        System.out.println(mImageHelper.getImage());
-        Upload upload = mTransfer.upload("untold-stories", "profileimage.jpg", mImageHelper.getImage());
-
-        while (!upload.isDone()){
-            //Toast.makeText(this, "Uploading...", Toast.LENGTH_LONG).show();
-            TransferProgress transferred = upload.getProgress();
-            System.out.println(transferred.getPercentTransferred());
-
-        }
-        Toast.makeText(this, "Uploaded", Toast.LENGTH_LONG).show();
-        // ----------------------
 
         super.onActivityResult(requestCode, resultCode, data);
     }

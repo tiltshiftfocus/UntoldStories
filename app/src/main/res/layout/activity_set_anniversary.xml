@@ -1,0 +1,122 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#EEE"
+    tools:context="com.untoldstories.signup.SetAnniversaryActivity">
+
+    <include
+        android:id="@+id/app_bar"
+        layout="@layout/app_bar"></include>
+
+
+    <ScrollView
+        android:id="@+id/scrollview_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/app_bar"
+        android:paddingLeft="12dp"
+        android:paddingRight="12dp"
+        android:paddingTop="8dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <RelativeLayout
+                android:id="@+id/anniversary_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/white_layout_bg">
+
+                <LinearLayout
+                    android:id="@+id/profileimage_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:padding="12dp">
+
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        android:id="@+id/user_image1"
+                        android:layout_width="120dp"
+                        android:layout_height="120dp"
+                        android:src="@drawable/logo"
+                        app:border_color="#000000"
+                        app:border_width="0.8dp" />
+
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        android:id="@+id/user_image2"
+                        android:layout_width="120dp"
+                        android:layout_height="120dp"
+                        android:layout_marginLeft="34dp"
+                        android:src="@drawable/logo"
+                        app:border_color="#000000"
+                        app:border_width="0.8dp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/username_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/profileimage_layout"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:padding="12dp">
+
+                    <TextView
+                        android:id="@+id/user_name1"
+                        android:layout_width="120dp"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="@string/user_name1"
+                        android:textColor="#333"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:id="@+id/user_name2"
+                        android:layout_width="120dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="34dp"
+                        android:gravity="center"
+                        android:text="@string/user_name2"
+                        android:textColor="#333"
+                        android:textSize="16sp" />
+
+                </LinearLayout>
+
+
+                <Button
+                    android:id="@+id/anniversary_date"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/username_layout"
+                    android:layout_marginBottom="8dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginTop="30dp"
+                    android:onClick="setAnniversary"
+                    android:paddingLeft="12dp"
+                    android:paddingRight="12dp"
+                    android:text="@string/set_anniversary" />
+
+            </RelativeLayout>
+
+            <Button
+                style="@style/login_button"
+                android:layout_width="250dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/anniversary_layout"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="22dp"
+                android:layout_marginTop="22dp"
+                android:background="@drawable/bluepurple_button"
+                android:onClick="saveDate"
+                android:text="@string/save" />
+
+        </RelativeLayout>
+    </ScrollView>
+
+
+</RelativeLayout>

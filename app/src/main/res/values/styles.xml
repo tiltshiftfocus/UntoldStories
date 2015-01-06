@@ -1,0 +1,41 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="AppTheme.Base">
+        <!-- Customize your theme here. -->
+    </style>
+
+    <style name="AppTheme.Dark" parent="Theme.AppCompat.NoActionBar">
+        <item name="colorPrimary">@color/toolBarColor</item>
+        <item name="colorPrimaryDark">@color/statusBarColor</item>
+        <item name="colorAccent">@color/accentColor</item>
+    </style>
+
+    <style name="AppTheme.Base" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="colorPrimary">@color/toolBarColor</item>
+        <item name="colorPrimaryDark">@color/statusBarColor</item>
+        <item name="colorAccent">@color/accentColor</item>
+    </style>
+
+    <style name="login_button" >
+        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">#ffffff</item>
+        <item name="android:gravity">center</item>
+        <item name="android:shadowColor">#000000</item>
+        <item name="android:shadowDx">1</item>
+        <item name="android:shadowDy">1</item>
+        <item name="android:shadowRadius">2</item>
+    </style>
+
+    <style name="ButtonToSpinner" parent="Widget.AppCompat.Spinner">
+        <item name="android:textAppearance">?android:attr/textAppearanceMedium</item>
+    </style>
+
+    <style name="blackEditText">
+        <item name="android:textColor">#000000</item>
+        <item name="android:textColorHint">#444444</item>
+    </style>
+
+
+</resources>

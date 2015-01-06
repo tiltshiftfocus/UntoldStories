@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/base_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#EEE"
+    tools:context="com.untoldstories.base.BaseActivity">
+
+    <include
+        android:id="@id/app_bar"
+        layout="@layout/app_bar"></include>
+
+    <android.support.v4.widget.DrawerLayout
+        android:id="@+id/drawer_layout1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:id="@+id/main_fragment_layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+        </RelativeLayout>
+
+        <fragment
+            android:id="@+id/nav_drawer1"
+            android:layout_width="280dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="start"
+            android:name="com.untoldstories.base.NavigationDrawerFragment"
+            tools:layout="@layout/drawer_list"></fragment>
+
+
+    </android.support.v4.widget.DrawerLayout>
+
+</LinearLayout>

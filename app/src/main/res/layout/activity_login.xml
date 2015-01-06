@@ -1,0 +1,89 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/statusBarColor"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    tools:context=".LoginActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/app_logo"
+            android:layout_width="180dp"
+            android:layout_height="180dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="25dp"
+            android:src="@drawable/logo" />
+
+        <RelativeLayout
+            android:id="@+id/login_fields"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/app_logo"
+            android:layout_marginTop="18dp">
+
+
+            <EditText
+                android:id="@+id/emailuser"
+                style="@style/blackEditText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="18dp"
+                android:background="@drawable/white_edittext"
+                android:hint="@string/email_user"
+                android:paddingLeft="12dp"
+                android:paddingRight="12dp"
+                android:singleLine="true" />
+
+            <EditText
+                android:id="@+id/password"
+                style="@style/blackEditText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/emailuser"
+                android:layout_centerHorizontal="true"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="18dp"
+                android:background="@drawable/white_edittext"
+                android:hint="@string/password_user"
+                android:inputType="textPassword"
+                android:paddingLeft="12dp"
+                android:paddingRight="12dp" />
+
+            <Button
+                android:id="@+id/login"
+                style="@style/login_button"
+                android:layout_width="250dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/password"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="22dp"
+                android:layout_marginTop="22dp"
+                android:background="@drawable/bluepurple_button"
+                android:onClick="loginUser"
+                android:text="@string/login_user" />
+
+            <TextView
+                android:id="@+id/sign_up"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/login"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:layout_marginBottom="12dp"
+                android:autoLink="email"
+                android:clickable="true"
+                android:onClick="signUp"
+                android:text="@string/sign_up" />
+        </RelativeLayout>
+    </RelativeLayout>
+
+</ScrollView>

@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.untoldstories" >
+
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+        <activity
+            android:name=".LoginActivity"
+            android:configChanges="orientation|screenSize"
+            android:label="@string/app_name"
+            android:launchMode="singleTask"
+            android:windowSoftInputMode="adjustPan" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".signup.SignupActivity"
+            android:configChanges="orientation|screenSize"
+            android:label="@string/title_activity_signup" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".LoginActivity" />
+        </activity>
+        <activity
+            android:name=".signup.AttachActivity"
+            android:configChanges="orientation|screenSize"
+            android:label="@string/title_activity_attach" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".signup.SignupActivity" />
+        </activity>
+        <activity
+            android:name=".base.BaseActivity"
+            android:label="@string/title_activity_base"
+            android:clearTaskOnLaunch="true">
+        </activity>
+        <activity
+            android:name=".signup.SetAnniversaryActivity"
+            android:label="@string/set_anniversary" >
+            <meta-data android:name="android.support.PARENT_ACTIVITY"
+                android:value=".LoginActivity"></meta-data>
+        </activity>
+    </application>
+
+</manifest>

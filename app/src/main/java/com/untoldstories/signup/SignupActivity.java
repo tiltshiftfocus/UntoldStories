@@ -22,7 +22,6 @@ import android.widget.Spinner;
 import android.widget.Toast;
 import com.untoldstories.R;
 import com.untoldstories.utils.ImageUtils;
-import com.untoldstories.utils.S3Cred;
 
 import java.io.FileNotFoundException;
 import java.io.IOException;
